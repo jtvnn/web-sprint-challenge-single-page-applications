@@ -24,17 +24,14 @@ export default function Order(props) {
     return (
         <form id='pizza-form' className='form container' onSubmit={onSubmit}>
           <div className='form-group submit'>
-            <h2>Add a User</h2>
+           
     
             {/* 🔥 DISABLE THE BUTTON */}
             <button id='submit' disabled={disabled}>submit</button>
     
             <div className='errors'>
               {/* 🔥 RENDER THE VALIDATION ERRORS HERE */}
-              <div>{errors.username}</div>
-              <div>{errors.email}</div>
-              <div>{errors.password}</div>
-              <div>{errors.terms}</div>
+              <div>{errors.name}</div>
             </div>
           </div>
     
