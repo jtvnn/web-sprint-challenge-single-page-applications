@@ -1,12 +1,5 @@
 import React, {useState, useEffect} from "react";
-import { 
-  useParams, 
-  useRouteMatch,
-  Route,
-  Switch,
-  NavLink,
-  Link
-} from 'react-router-dom';
+import { Route, Switch,Link } from 'react-router-dom';
 import Order from './components/Order'
 import axios from 'axios'
 import * as yup from 'yup'
@@ -30,7 +23,6 @@ const initialPizza = []
 const initialDisabled = true
 
 const App = () => {
-  const { path, url } = useRouteMatch();
   const [pizza, setPizza] = useState(initialPizza)
   const [formValues, setFormValues] = useState(initialFormValues)
   const [formErrors, setFormErrors] = useState(initialFormErrors)
@@ -44,7 +36,6 @@ const App = () => {
     .catch(err => console.error(err))
   }
   
-    
   const postNewUser = newUser => {
     axios.post('https://reqres.in/api/orders', newUser)
     .then(res => {
