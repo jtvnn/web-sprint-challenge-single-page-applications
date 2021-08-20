@@ -61,6 +61,7 @@ export default function Order(props) {
             <div>
                 <label>Special Instructions:
                 <input
+                    id='special-text'
                     value={values.special}
                     onChange={onChange}
                     name='special'

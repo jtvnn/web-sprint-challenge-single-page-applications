@@ -40,6 +40,7 @@ const App = () => {
     axios.post('https://reqres.in/api/orders', newUser)
     .then(res => {
       setPizza([res.data])
+      console.log(pizza)
     })
     .catch(err => console.error(err))
 
